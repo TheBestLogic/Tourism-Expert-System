@@ -44,8 +44,8 @@ namespace RGR_II.Classes
             }
             public void Set(byte One = 0, byte Two = 0)
             {
-                FF = (One < 0) ? (((One == 1) ? ((byte)1) : ((byte)2))) : ((byte)0);
-                FS = (Two < 0) ? (((Two == 1) ? ((byte)1) : ((byte)2))) : ((byte)0);
+                FF = (One <= 2) ? One : ((byte)0);
+                FS = (Two <= 2) ? Two : ((byte)0);
             }
 
             public bool CheckOR_0()
@@ -120,9 +120,9 @@ namespace RGR_II.Classes
             }
             public void Set(byte One = 0, byte Two = 0, byte Three = 0)
             {
-                FF = (One < 0) ? (((One == 1) ? ((byte)1) : ((byte)2))) : ((byte)0);
-                FS = (Two < 0) ? (((Two == 1) ? ((byte)1) : ((byte)2))) : ((byte)0);
-                FT = (Three < 0) ? (((Three == 1) ? ((byte)1) : ((byte)2))) : ((byte)0);
+                FF = (One <= 2) ? One : ((byte)0);
+                FS = (Two <= 2) ? Two : ((byte)0);
+                FT = (Three <= 2) ? Three : ((byte)0);
             }
 
             public bool CheckOR_0()
